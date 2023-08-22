@@ -59,14 +59,96 @@
 
 
 <body>
+          
+    <table class="table table-bordered border-primary">
+        
+        <thead>
+        
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Parking</th>
+                <th scope="col">vote</th>
+                <th scope="col">distance_to_center</th>
+            </tr>
+                
+        </thead>
+                
+        <tbody>
 
-    <pre>
-        <?php
 
-            var_dump($hotels);
+            <?php
 
-        ?>  
-    </pre>
+                foreach ($hotels as $index => $hotel) {
+            
+            ?>
+                    
+                <tr>
+                    <th scope="row">
+                        <?php echo $index; ?>
+                    </th>
+                    <td>
+                        <?php var_dump($hotel[0][0]); ?>
+                    </td>
+                    <td>
+                        <?php var_dump($hotel[0][1]); ?>
+                    </td>
+                    <td>
+                        <?php var_dump($hotel[0][2]); ?>
+                    </td>
+                    <td>
+                        <?php var_dump($hotel[0][3]); ?>
+                    </td>
+                    <td>
+                        <?php var_dump($hotel[0][4]); ?>
+                    </td>
+                </tr>
+
+                <!-- <tr>
+                    <th scope="row">
+                        1
+                    </th>
+                    <td>
+                        Mark
+                    </td>
+                    <td>
+                        Otto
+                    </td>
+                    <td>
+                        @mdo
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr> -->
+            <?php
+                }
+            ?>
+        </tbody>
+  
+    </table>
     
 </body>
+
+
+
 </html>
